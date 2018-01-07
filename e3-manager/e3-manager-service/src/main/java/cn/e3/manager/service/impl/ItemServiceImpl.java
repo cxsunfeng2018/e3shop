@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import cn.e3.manager.service.ItemService;
 import cn.e3.mapper.TbItemMapper;
 import cn.e3.pojo.TbItem;
+import cn.e3.utils.EasyUIPageBean;
 @Service
 public class ItemServiceImpl implements ItemService {
 	
@@ -23,6 +24,12 @@ public class ItemServiceImpl implements ItemService {
 		TbItem item = itemMapper.selectByPrimaryKey(itemId);
 		
 		return item;
+	}
+
+	@Override
+	public EasyUIPageBean findItemListByPage(Integer page, Integer rows) {
+	
+		return null;
 	}
 
 }
